@@ -25,4 +25,4 @@ fi
 
 brew install ansible
 
-ansible-playbook mac-laptop.yml
+ansible-playbook laptop-initial_mac.yml
