@@ -5,7 +5,7 @@
 #
 # Created by Dan Jones
 
-which -s brew
+which brew
 if [[ $? != 0 ]] ; then
     # Install Homebrew
     echo "[!] Installing Homebrew to install other dependancies"
