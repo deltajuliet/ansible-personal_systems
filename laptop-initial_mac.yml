@@ -79,7 +79,7 @@
         name: gnupg
         state: present
         
-    - name: "Brew install Htop"
+    - name: "Brew install htop"
       community.general.homebrew:
         name: htop
         state: present
