@@ -41,9 +41,79 @@
         state: present
         
     - name: "Brew install Alfred"
-      community.general.alfred:
+      community.general.homebrew:
         name: homebrew/alfred
         state: present
+        
+    - name: "Brew install AWS-CLI"
+      community.general.homebrew:
+        name: homebrew/awscli
+        state: present
+        
+    - name: "Brew install core-utils"
+      community.general.homebrew:
+        name: homebrew/coreutils
+        state: present
+
+    - name: "Brew install curl"
+      community.general.homebrew:
+        name: homebrew/curl
+        state: present
+        
+    - name: "Brew install GNUPG"
+      community.general.homebrew:
+        name: homebrew/gnupg
+        state: present
+        
+    - name: "Brew install Htop"
+      community.general.homebrew:
+        name: homebrew/htop
+        state: present
+        
+    - name: "Brew install kubectl"
+      community.general.homebrew:
+        name: homebrew/kubernetes-cli
+        state: present
+        
+    - name: "Brew install PDFGrep"
+      community.general.homebrew:
+        name: homebrew/pdfgrep
+        state: present
+
+    - name: "Brew install Python"
+      community.general.homebrew:
+        name: homebrew/python
+        state: present
+
+    - name: "Brew install Stow"
+      community.general.homebrew:
+        name: homebrew/stow
+        state: present
+
+    - name: "Brew install Telnet"
+      community.general.homebrew:
+        name: homebrew/telnet
+        state: present
+        
+    - name: "Brew install Tesseract"
+      community.general.homebrew:
+        name: homebrew/tesseract
+        state: present
+        
+    - name: "Brew install Tmux"
+      community.general.homebrew:
+        name: homebrew/tmux
+        state: present
+
+    - name: "Brew install Wget"
+      community.general.homebrew:
+        name: homebrew/wget
+        state: present
+
+    - name: "Brew install zsh-syntax-highlighting"
+      community.general.homebrew:
+        name: homebrew/zsh-syntax-highlighting
+        state: present     
         
     - name: "MAS Install Evernote"
       community.general.mas:
@@ -95,3 +165,18 @@
     - name: "MAS Install Xcode"
         id: 497799835
         state: present
+        
+    - debug:
+        msg: "
+Remaining Tasks to complete:
+[ ] Configure iTerm for transparent background and unlimited scrollback
+[ ] Configure Alfred to start on boot, enable clipboard history
+[ ] Configure Magnet to start on boot
+[ ] Login to Evernote
+[ ] Create a ~/code directory
+[ ] Create a ~/code/github/personal directory
+[ ] Git clone dotfiles repo
+[ ] Stow restore dotfiles
+"  
+      
+    
