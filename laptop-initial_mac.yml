@@ -28,6 +28,7 @@
       community.general.homebrew:
         name: homebrew/cask/iterm2
         state: present
+        ignore_errors: yes  
         
     - name: "Add cask with SourceProFonts"
       community.general.homebrew_tap:
