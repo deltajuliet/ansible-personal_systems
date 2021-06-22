@@ -23,6 +23,15 @@ else
     brew update
 fi
 
+#Install ansible
+echo "[-] Installing Ansible"
 brew install ansible
+echo "[-] Ansible install complete!"
 
+echo "[-] Installing Ansible mods needed for playbooks"
+ansible-galaxy collection install community.general
+echo "[-] Mod install complete"
+
+echo "[-] Running Mac Ansible playbook"
 ansible-playbook laptop-initial_mac.yml
+echo "[-] Playbook run complete"
