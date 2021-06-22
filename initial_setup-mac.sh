@@ -23,10 +23,19 @@ else
     brew update
 fi
 
+echo "[-] Install oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "[-] Oh-my-zsh install complete"
+
 #Install ansible
 echo "[-] Installing Ansible"
-brew install ansible
+brew install ansible git
 echo "[-] Ansible install complete!"
+
+echo "[-] Installs oh-my-zsh theme"
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+echo "[-] Theme install complete"
 
 echo "[-] Installing Ansible mods needed for playbooks"
 ansible-galaxy collection install community.general
