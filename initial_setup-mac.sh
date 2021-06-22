@@ -23,3 +23,6 @@ else
     brew update
 fi
 
+brew install ansible
+
+ansible-playbook mac-laptop.yml
