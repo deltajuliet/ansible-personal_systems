@@ -53,6 +53,11 @@
       community.general.homebrew_cask:
         name: alfred
         state: present
+
+    - name: "Brew install Spotify"
+      community.general.homebrew_cask:
+        name: spotify
+        state: present
         
     - name: "Brew install AWS-CLI"
       community.general.homebrew:
