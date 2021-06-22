@@ -18,6 +18,11 @@
       community.general.homebrew:
         name: git
         state: present
+    
+    - name: "Brew install SVN"
+      community.general.homebrew:
+        name: svn
+        state: present
         
     - name: "Brew install Vim"
       community.general.homebrew:
@@ -25,10 +30,9 @@
         state: present
     
     - name: "Brew install iTerm"
-      community.general.homebrew:
-        name: homebrew/cask/iterm2
+      community.general.homebrew_cask:
+        name: iterm2
         state: present
-        ignore_errors: yes  
         
     - name: "Add cask with SourceProFonts"
       community.general.homebrew_tap:
@@ -36,89 +40,84 @@
         state: present  
     
     - name: "Brew install SourceProFonts"
-      community.general.homebrew:
-        name: homebrew/cask/font-source-code-pro
+      community.general.homebrew_cask:
+        name: font-source-code-pro
         state: present
 
     - name: "Brew install VS Code"
-      community.general.homebrew:
-        name: homebrew/cask/virtual-studio-code
+      community.general.homebrew_cask:
+        name: visual-studio-code
         state: present
         
     - name: "Brew install Alfred"
-      community.general.homebrew:
-        name: homebrew/alfred
+      community.general.homebrew_cask:
+        name: alfred
         state: present
         
     - name: "Brew install AWS-CLI"
       community.general.homebrew:
-        name: homebrew/awscli
+        name: awscli
         state: present
         
     - name: "Brew install core-utils"
       community.general.homebrew:
-        name: homebrew/coreutils
+        name: coreutils
         state: present
 
     - name: "Brew install curl"
       community.general.homebrew:
-        name: homebrew/curl
+        name: curl
         state: present
         
     - name: "Brew install GNUPG"
       community.general.homebrew:
-        name: homebrew/gnupg
+        name: gnupg
         state: present
         
     - name: "Brew install Htop"
       community.general.homebrew:
-        name: homebrew/htop
+        name: htop
         state: present
         
     - name: "Brew install kubectl"
       community.general.homebrew:
-        name: homebrew/kubernetes-cli
+        name: kubernetes-cli
         state: present
         
     - name: "Brew install PDFGrep"
       community.general.homebrew:
-        name: homebrew/pdfgrep
+        name: pdfgrep
         state: present
 
     - name: "Brew install Python"
       community.general.homebrew:
-        name: homebrew/python
+        name: python
         state: present
 
     - name: "Brew install Stow"
       community.general.homebrew:
-        name: homebrew/stow
+        name: stow
         state: present
 
     - name: "Brew install Telnet"
       community.general.homebrew:
-        name: homebrew/telnet
+        name: telnet
         state: present
         
     - name: "Brew install Tesseract"
       community.general.homebrew:
-        name: homebrew/tesseract
+        name: tesseract
         state: present
         
     - name: "Brew install Tmux"
       community.general.homebrew:
-        name: homebrew/tmux
+        name: tmux
         state: present
 
     - name: "Brew install Wget"
       community.general.homebrew:
-        name: homebrew/wget
+        name: wget
         state: present
-
-    - name: "Brew install zsh-syntax-highlighting"
-      community.general.homebrew:
-        name: homebrew/zsh-syntax-highlighting
-        state: present     
         
     - name: "MAS Install Evernote"
       community.general.mas:
@@ -175,22 +174,20 @@
         id: 405399194
         state: present
 
-    - name: "MAS Install Xcode"
-      community.general.mas:
-        id: 497799835
-        state: present
+#    - name: "MAS Install Xcode"
+#      community.general.mas:
+#        id: 497799835
+#        state: present
         
     - debug:
         msg: "
 Remaining Tasks to complete:
-[ ] Configure iTerm for transparent background and unlimited scrollback
-[ ] Configure Alfred to start on boot, enable clipboard history
-[ ] Configure Magnet to start on boot
-[ ] Login to Evernote
-[ ] Create a ~/code directory
-[ ] Create a ~/code/github/personal directory
-[ ] Git clone dotfiles repo
+[ ] Configure iTerm for transparent background and unlimited scrollback\n
+[ ] Configure Alfred to start on boot, enable clipboard history\n
+[ ] Configure Magnet to start on boot\n
+[ ] Login to Evernote\n
+[ ] Create a ~/code directory\n
+[ ] Create a ~/code/github/personal directory\n
+[ ] Git clone dotfiles repo\n
 [ ] Stow restore dotfiles
 "  
-      
-    
