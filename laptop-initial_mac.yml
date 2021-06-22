@@ -1,0 +1,8 @@
+---
+  - name: "Install commmon Mac software"
+    hosts: localhost
+    connection: local
+    tasks:
+    
+    - name: "Install iTerm"
+    ##TODO: Add iTerm installation requirements
