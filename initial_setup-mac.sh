@@ -37,6 +37,11 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/theme
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 echo "[-] Theme install complete"
 
+echo "[-] Installs zsh completion/syntax highlighting"
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+echo "[-] Completed install of zsh completion/syntax highlighting"
+
 echo "[-] Installing Ansible mods needed for playbooks"
 ansible-galaxy collection install community.general
 echo "[-] Mod install complete"

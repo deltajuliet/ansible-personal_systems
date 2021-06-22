@@ -29,12 +29,16 @@
         name: homebrew/cask/iterm2
         state: present
         
-    - name: "Brew install SourceProFonts"
+    - name: "Add cask with SourceProFonts"
       community.general.homebrew_tap:
         name: homebrew/cask-fonts
+        state: present  
+    
+    - name: "Brew install SourceProFonts"
       community.general.homebrew:
         name: homebrew/cask/font-source-code-pro
-        
+        state: present
+
     - name: "Brew install VS Code"
       community.general.homebrew:
         name: homebrew/cask/virtual-studio-code
@@ -131,38 +135,47 @@
         state: present  
 
     - name: "MAS Install Mountain Duck"
+      community.general.mas:
         id: 1024974133
         state: present
 
     - name: "MAS Install iStat Menus"
+      community.general.mas:
         id: 1319778037
         state: present
 
     - name: "MAS Install Magnet"
+      community.general.mas:
         id: 441258766
         state: present
 
     - name: "MAS Install Slack"
+      community.general.mas:
         id: 803453959
         state: present  
 
     - name: "MAS Install PDFScanner"
+      community.general.mas:
         id: 410968114
         state: present
 
     - name: "MAS Install Keka"
+      community.general.mas:
         id: 470158793
         state: present
 
     - name: "MAS Install DaisyDisk"
+      community.general.mas:
         id: 411643860
         state: present
 
     - name: "MAS Install Kindle"
+      community.general.mas:
         id: 405399194
         state: present
 
     - name: "MAS Install Xcode"
+      community.general.mas:
         id: 497799835
         state: present
         
