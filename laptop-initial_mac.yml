@@ -4,5 +4,94 @@
     connection: local
     tasks:
     
-    - name: "Install iTerm"
-    ##TODO: Add iTerm installation requirements
+    - name: "Update and upgrade Homebrew environment"
+      community.general.homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
+    
+    - name: "Brew install mas-cli for install Mac App Store Apps"
+      community.general.homebrew:
+        name: mas
+        state: present
+        
+    - name: "Brew install Git"
+      community.general.homebrew:
+        name: git
+        state: present
+        
+    - name: "Brew install Vim"
+      community.general.homebrew:
+        name: vim
+        state: present
+    
+    - name: "Brew install iTerm"
+      community.general.homebrew:
+        name: homebrew/cask/iterm2
+        state: present
+        
+    - name: "Brew install SourceProFonts"
+      community.general.homebrew_tap:
+        name: homebrew/cask-fonts
+      community.general.homebrew:
+        name: homebrew/cask/font-source-code-pro
+        
+    - name: "Brew install VS Code"
+      community.general.homebrew:
+        name: homebrew/cask/virtual-studio-code
+        state: present
+        
+    - name: "Brew install Alfred"
+      community.general.alfred:
+        name: homebrew/alfred
+        state: present
+        
+    - name: "MAS Install Evernote"
+      community.general.mas:
+        id: 406056744
+        state: present
+
+    - name: "MAS Install EverTool"
+      community.general.mas:
+        id: 1396383432
+        state: present
+
+    - name: "MAS Install Patterns"
+      community.general.mas:
+        id: 429449079
+        state: present  
+
+    - name: "MAS Install Mountain Duck"
+        id: 1024974133
+        state: present
+
+    - name: "MAS Install iStat Menus"
+        id: 1319778037
+        state: present
+
+    - name: "MAS Install Magnet"
+        id: 441258766
+        state: present
+
+    - name: "MAS Install Slack"
+        id: 803453959
+        state: present  
+
+    - name: "MAS Install PDFScanner"
+        id: 410968114
+        state: present
+
+    - name: "MAS Install Keka"
+        id: 470158793
+        state: present
+
+    - name: "MAS Install DaisyDisk"
+        id: 411643860
+        state: present
+
+    - name: "MAS Install Kindle"
+        id: 405399194
+        state: present
+
+    - name: "MAS Install Xcode"
+        id: 497799835
+        state: present
