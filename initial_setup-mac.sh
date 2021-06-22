@@ -35,3 +35,17 @@ echo "[-] Mod install complete"
 echo "[-] Running Mac Ansible playbook"
 ansible-playbook laptop-initial_mac.yml
 echo "[-] Playbook run complete"
+
+echo "If a Yubikey is needed for cloning dotfile repos, run the following:/n"
+echo "
+yubikey_ssh_enable () {
+    ssh-add -l 1> /dev/null 2>/dev/null
+#    if [[ $? -eq 0 ]] {
+        echo "Enabling Yubikey for use with SSH. Sudo password needed to restart gpg-agent with ssh support..."
+        sudo killall gpg-agent
+        sudo killall ssh-agent  
+        eval $( gpg-agent --daemon --enable-ssh-support )
+        ssh-add -l
+#    }
+}
+"
