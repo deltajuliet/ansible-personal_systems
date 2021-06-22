@@ -42,6 +42,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 echo "[-] Completed install of zsh completion/syntax highlighting"
 
+echo "[-] Ensure that permissions are correct for Oh-my-zsh"
+sudo chmod -R 755 ~/.oh-my-zsh
+echo "Done."
+
 echo "[-] Installing Ansible mods needed for playbooks"
 ansible-galaxy collection install community.general
 echo "[-] Mod install complete"
