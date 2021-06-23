@@ -56,8 +56,8 @@
 
     - name: "Install Stow"
       ansible.builtin.shell: specific_install_scripts/redhat_stow_install.sh
-        args:
-          creates: /usr/local/bin/stow
+      args:
+        creates: /usr/local/bin/stow
 
     - name: "Install Telnet"
       yum:
@@ -78,12 +78,16 @@
       yum:
         name: wget
         state: present
+
+    - name: "code directory exists"
+      ansible.builtin.file:
+      path: ~/code/github
+      state: directory
+      mode: '0755'
         
     - debug:
         msg: "
 Remaining Tasks to complete:
-[ ] Create a ~/code directory\n
-[ ] Create a ~/code/github/personal directory\n
 [ ] Git clone dotfiles repo\n
 [ ] Stow restore dotfiles
 "  
