@@ -19,9 +19,9 @@ else
     echo "Using normal dotfiles"
 fi
 
-stow -nvt ~ bash
-stow -nvt ~ git
-stow -nvt ~ screen
-stow -nvt ~ tmux
-stow -nvt ~ vim
-stow -nvt ~ zsh
+stow -vt ~ bash
+stow -vt ~ git
+stow -vt ~ screen
+stow -vt ~ tmux
+stow -vt ~ vim
+stow -vt ~ zsh
