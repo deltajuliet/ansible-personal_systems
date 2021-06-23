@@ -80,10 +80,10 @@
         state: present
 
     - name: "code directory exists"
-      ansible.builtin.file:
-      path: ~/code/github
-      state: directory
-      mode: '0755'
+        ansible.builtin.file:
+          path: ~/code/github
+          state: directory
+          mode: '0755'
         
     - debug:
         msg: "
