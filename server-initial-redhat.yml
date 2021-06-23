@@ -79,11 +79,11 @@
         name: wget
         state: present
 
-    - name: "code directory exists"
-        ansible.builtin.file:
-          path: ~/code/github
-          state: directory
-          mode: '0755'
+    - name: "Code directory exists"
+      ansible.builtin.file:
+        path: ~/code/github
+        state: directory
+        mode: '0755'
         
     - debug:
         msg: "
