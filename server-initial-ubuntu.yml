@@ -1,0 +1,89 @@
+---
+  - name: "Install commmon dev (Ubuntu) server software"
+    hosts: localhost
+    connection: local
+    tasks:
+        
+    - name: "Install Git"
+      apt:
+        name: git
+        state: present
+        
+    - name: "Install Vim"
+      apt:
+        name: vim
+        state: present
+        
+    - name: "Install AWS-CLI"
+      apt:
+        name: awscli
+        state: present
+        
+    - name: "Install core-utils"
+      apt:
+        name: coreutils
+        state: present
+
+    - name: "Install curl"
+      apt:
+        name: curl
+        state: present
+        
+    - name: "Install GNUPG"
+      apt:
+        name: gnupg
+        state: present
+        
+    - name: "Install htop"
+      apt:
+        name: htop
+        state: present
+        
+    - name: "Install kubectl"
+      apt:
+        name: kubernetes-cli
+        state: present
+        
+    - name: "Install PDFGrep"
+      apt:
+        name: pdfgrep
+        state: present
+
+    - name: "Install Python"
+      apt:
+        name: python
+        state: present
+
+    - name: "Install Stow"
+      apt:
+        name: stow
+        state: present
+
+    - name: "Install Telnet"
+      apt:
+        name: telnet
+        state: present
+        
+    - name: "Install Tesseract"
+      apt:
+        name: tesseract
+        state: present
+        
+    - name: "Install Tmux"
+      apt:
+        name: tmux
+        state: present
+
+    - name: "Install Wget"
+      apt:
+        name: wget
+        state: present
+        
+    - debug:
+        msg: "
+Remaining Tasks to complete:
+[ ] Create a ~/code directory\n
+[ ] Create a ~/code/github/personal directory\n
+[ ] Git clone dotfiles repo\n
+[ ] Stow restore dotfiles
+"  

@@ -1,0 +1,89 @@
+---
+  - name: "Install commmon dev (Redhat) server software"
+    hosts: localhost
+    connection: local
+    tasks:
+        
+    - name: "Install Git"
+      yum:
+        name: git
+        state: present
+        
+    - name: "Install Vim"
+      yum:
+        name: vim
+        state: present
+        
+    - name: "Install AWS-CLI"
+      yum:
+        name: awscli
+        state: present
+        
+    - name: "Install core-utils"
+      yum:
+        name: coreutils
+        state: present
+
+    - name: "Install curl"
+      yum:
+        name: curl
+        state: present
+        
+    - name: "Install GNUPG"
+      yum:
+        name: gnupg
+        state: present
+        
+    - name: "Install htop"
+      yum:
+        name: htop
+        state: present
+        
+    - name: "Install kubectl"
+      yum:
+        name: kubernetes-cli
+        state: present
+        
+    - name: "Install PDFGrep"
+      yum:
+        name: pdfgrep
+        state: present
+
+    - name: "Install Python"
+      yum:
+        name: python
+        state: present
+
+    - name: "Install Stow"
+      ansible.builtin.shell: specific_install_scripts/redhat_stow_install.sh
+        args:
+          creates: /usr/local/bin/stow
+
+    - name: "Install Telnet"
+      yum:
+        name: telnet
+        state: present
+        
+    - name: "Install Tesseract"
+      yum:
+        name: tesseract
+        state: present
+        
+    - name: "Install Tmux"
+      yum:
+        name: tmux
+        state: present
+
+    - name: "Install Wget"
+      yum:
+        name: wget
+        state: present
+        
+    - debug:
+        msg: "
+Remaining Tasks to complete:
+[ ] Create a ~/code directory\n
+[ ] Create a ~/code/github/personal directory\n
+[ ] Git clone dotfiles repo\n
+[ ] Stow restore dotfiles
+"  
