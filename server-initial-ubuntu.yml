@@ -2,6 +2,7 @@
   - name: "Install commmon dev (Ubuntu) server software"
     hosts: localhost
     connection: local
+    become: yes
     tasks:
         
     - name: "Install Git"
