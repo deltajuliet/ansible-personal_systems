@@ -15,11 +15,6 @@
         name: vim
         state: present
         
-    - name: "Install AWS-CLI"
-      yum:
-        name: awscli
-        state: present
-        
     - name: "Install core-utils"
       yum:
         name: coreutils
@@ -38,16 +33,6 @@
     - name: "Install htop"
       yum:
         name: htop
-        state: present
-        
-    - name: "Install kubectl"
-      yum:
-        name: kubernetes-cli
-        state: present
-        
-    - name: "Install PDFGrep"
-      yum:
-        name: pdfgrep
         state: present
 
     - name: "Install Python"

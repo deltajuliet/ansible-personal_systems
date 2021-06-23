@@ -15,11 +15,6 @@
         name: vim
         state: present
         
-    - name: "Install AWS-CLI"
-      apt:
-        name: awscli
-        state: present
-        
     - name: "Install core-utils"
       apt:
         name: coreutils
@@ -38,11 +33,6 @@
     - name: "Install htop"
       apt:
         name: htop
-        state: present
-        
-    - name: "Install kubectl"
-      apt:
-        name: kubernetes-cli
         state: present
         
     - name: "Install PDFGrep"
@@ -80,11 +70,15 @@
         name: wget
         state: present
         
+    - name: "Code directory exists"
+      ansible.builtin.file:
+        path: ~/code/github
+        state: directory
+        mode: '0755'
+        
     - debug:
         msg: "
 Remaining Tasks to complete:
-[ ] Create a ~/code directory\n
-[ ] Create a ~/code/github/personal directory\n
 [ ] Git clone dotfiles repo\n
 [ ] Stow restore dotfiles
 "  
