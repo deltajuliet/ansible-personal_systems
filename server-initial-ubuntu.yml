@@ -55,11 +55,6 @@
         name: telnet
         state: present
         
-    - name: "Install Tesseract"
-      apt:
-        name: tesseract-ocr-eng
-        state: present
-        
     - name: "Install Tmux"
       apt:
         name: tmux
