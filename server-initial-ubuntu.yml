@@ -57,7 +57,7 @@
         
     - name: "Install Tesseract"
       apt:
-        name: tesseract
+        name: tesseract-ocr-eng
         state: present
         
     - name: "Install Tmux"
