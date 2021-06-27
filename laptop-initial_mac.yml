@@ -179,10 +179,13 @@
         id: 405399194
         state: present
 
-#    - name: "MAS Install Xcode"
-#      community.general.mas:
-#        id: 497799835
-#        state: present
+
+    - name: Clone in personal dotfiles repo
+      ansible.builtin.git:
+        repo:  git@github.com:deltajuliet/dotfiles.git
+        dest: ~/code/github/
+
+    - include software-oh_my_zsh-setup.yml
         
     - debug:
         msg:
@@ -191,5 +194,4 @@
           - "[ ] Configure Alfred to start on boot, enable clipboard history"
           - "[ ] Configure Magnet to start on boot"
           - "[ ] Login to Evernote"
-          - "[ ] Git clone dotfiles repo"
           - "[ ] Stow restore dotfiles"  

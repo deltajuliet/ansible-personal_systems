@@ -65,15 +65,14 @@
         name: wget
         state: present
 
-    - name: "Code directory exists"
-      ansible.builtin.file:
-        path: ~/code/github
-        state: directory
-        mode: '0755'
-        
+    - name: Clone in personal dotfiles repo
+      ansible.builtin.git:
+        repo:  git@github.com:deltajuliet/dotfiles.git
+        dest: ~/code/github/
+
+    - include software-oh_my_zsh-setup.yml
+
     - debug:
         msg: 
           - "Remaining Tasks to complete:"
-          - "[ ] Install Oh-my-zsh using playbook"
-          - "[ ] Git clone dotfiles repo"
           - "[ ] Stow restore dotfiles"
