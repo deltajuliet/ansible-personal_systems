@@ -32,12 +32,6 @@ else
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   echo "[-] Oh-my-zsh install complete"
 
-  echo "[-] Installs zsh completion/syntax highlighting"
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-  echo "[-] Completed install of zsh completion/syntax highlighting"
-fi
-
 if [[ ! -f $ZSH_CUSTOM/themes/spaceship.zsh-theme ]]; then
   echo "[-] Installing oh-my-zsh theme"
   git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
