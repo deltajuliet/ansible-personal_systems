@@ -65,11 +65,10 @@
         name: wget
         state: present
         
-    - name: "Code directory exists"
-      ansible.builtin.file:
-        path: ~/code/github
-        state: directory
-        mode: '0755'
+    - name: "Install ZSH"
+      apt:
+        name: zsh
+        state: present
         
     - debug:
         msg: "
