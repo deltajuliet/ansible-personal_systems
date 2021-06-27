@@ -72,7 +72,7 @@
 
     - name: Clone in personal dotfiles repo
       git:
-        repo:  git@github.com:deltajuliet/dotfiles.git
+        repo: git@github.com:deltajuliet/dotfiles.git
         dest: ~/code/github/
 
     - include software-oh_my_zsh-setup.yml
