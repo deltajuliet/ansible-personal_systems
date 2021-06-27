@@ -25,36 +25,6 @@ else
     brew update
 fi
 
-if [[ -d ~/.oh-my-zsh ]]; then
-  echo "[-] Oh-my-zsh is installed, skipping."
-else
-  echo "[-] Installing oh-my-zsh"
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  echo "[-] Oh-my-zsh install complete"
-
-if [[ ! -f $ZSH_CUSTOM/themes/spaceship.zsh-theme ]]; then
-  echo "[-] Installing oh-my-zsh theme"
-  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-  echo "[-] Theme install complete"
-fi
-
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]]; then
-  echo "[-] Installs zsh completion"
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  echo "[-] Completed install of zsh completion"
-fi
-
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]]; then
-  echo "[-] Installs zsh syntax highlighting"
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-  echo "[-] Completed install of zsh syntax highlighting"
-fi
-
-echo "[-] Ensure that permissions are correct for Oh-my-zsh"
-chmod -R 755 ~/.oh-my-zsh
-echo "Done."
-
 #Install ansible
 which ansible
 if [[ $? != 0 ]] ; then

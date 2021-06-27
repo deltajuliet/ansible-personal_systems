@@ -71,8 +71,8 @@
         state: present
         
     - debug:
-        msg: "
-Remaining Tasks to complete:
-[ ] Git clone dotfiles repo\n
-[ ] Stow restore dotfiles
-"  
+        msg: 
+          - "Remaining Tasks to complete:"
+          - "[ ] Install Oh-my-zsh using playbook"
+          - "[ ] Git clone dotfiles repo"
+          - "[ ] Stow restore dotfiles"

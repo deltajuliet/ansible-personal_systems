@@ -3,40 +3,41 @@
     hosts: localhost
     connection: local
     tasks:
+
+    - name: Pull down and install oh-my-zsh
+      ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      args:
+        creates: ~/.oh-my-zsh
+    
+    - name: Install spaceship theme
+      ansible.builtin.git:
+        repo: https://github.com/denysdovhan/spaceship-prompt.git
+        dest: ~/.oh-my-zsh/custom/themes/spaceship-prompt
+        depth: 1
       
-      - name: Pull down and install oh-my-zsh
-        ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-          creates: ~/.oh-my-zsh
-      
-      - name: Install spaceship theme
-        ansible.builtin.git:
-          repo: https://github.com/denysdovhan/spaceship-prompt.git
-          dest: ~/.oh-my-zsh/custom/themes/spaceship-prompt
-          depth: 1
+    - name: Symlink spaceship theme
+      file: 
+        src: ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme
+        dest: ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
+        state: link
+    
+    - name: Install auto-suggestions
+      ansible.builtin.git:
+        repo: https://github.com/zsh-users/zsh-autosuggestions
+        dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    
+    - name: install syntax-highlighting
+      ansible.builtin.git:
+        repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
         
-      - name: Symlink spaceship theme
-        file: 
-          src: ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme
-          dest: ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
-          state: link
-      
-      - name: Install auto-suggestions
-        ansible.builtin.git:
-          repo: https://github.com/zsh-users/zsh-autosuggestions
-          dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-      
-      - name: install syntax-highlighting
-        ansible.builtin.git:
-          repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-          dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-      
-      - name: Set permissions
-        file: ~/.oh-my-zsh
-          owner: {{ ansible_user_id }}
-          mode: 0755
-          recurse: yes
-          
-      - name: Change shell to zsh
-          user: 
-            name: {{ ansible_user_id }}
-            shell: /bin/zsh
+    - name: Change shell to zsh
+      user: 
+        name: "{{ ansible_user_id }}"
+        shell: /bin/zsh
+        
+    - debug:
+        msg: 
+          - "Remaining Tasks to complete:"
+          - "[ ] Git clone dotfiles repo"
+          - "[ ] Stow restore dotfiles"
