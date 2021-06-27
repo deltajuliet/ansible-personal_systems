@@ -32,6 +32,7 @@
         dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
         
     - name: Change shell to zsh
+      become: yes
       user: 
         name: "{{ ansible_user_id }}"
         shell: /bin/zsh
