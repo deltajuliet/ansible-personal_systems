@@ -69,7 +69,7 @@
       apt:
         name: zsh
         state: present
-        
+
     - debug:
         msg: 
           - "Remaining Tasks to complete:"
