@@ -185,14 +185,11 @@
 #        state: present
         
     - debug:
-        msg: "
-Remaining Tasks to complete:
-[ ] Configure iTerm for transparent background and unlimited scrollback\n
-[ ] Configure Alfred to start on boot, enable clipboard history\n
-[ ] Configure Magnet to start on boot\n
-[ ] Login to Evernote\n
-[ ] Create a ~/code directory\n
-[ ] Create a ~/code/github/personal directory\n
-[ ] Git clone dotfiles repo\n
-[ ] Stow restore dotfiles
-"  
+        msg:
+          - "Remaining Tasks to complete:"
+          - "[ ] Configure iTerm for transparent background and unlimited scrollback"
+          - "[ ] Configure Alfred to start on boot, enable clipboard history"
+          - "[ ] Configure Magnet to start on boot"
+          - "[ ] Login to Evernote"
+          - "[ ] Git clone dotfiles repo"
+          - "[ ] Stow restore dotfiles"  
