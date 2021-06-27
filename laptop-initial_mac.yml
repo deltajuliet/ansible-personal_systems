@@ -182,7 +182,7 @@
 
     - name: Clone in personal dotfiles repo
       git:
-        repo: git@github.com:deltajuliet/dotfiles.git
+        repo: https://github.com/deltajuliet/dotfiles.git
         dest: ~/code/github/
         
     - debug:
