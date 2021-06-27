@@ -71,7 +71,7 @@
         state: present
 
     - name: Clone in personal dotfiles repo
-      ansible.builtin.git:
+      git:
         repo:  git@github.com:deltajuliet/dotfiles.git
         dest: ~/code/github/
 
@@ -80,5 +80,4 @@
     - debug:
         msg: 
           - "Remaining Tasks to complete:"
-          - "[ ] Install Oh-my-zsh using playbook"
           - "[ ] Stow restore dotfiles"
