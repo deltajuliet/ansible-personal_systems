@@ -75,9 +75,10 @@
         repo: git@github.com:deltajuliet/dotfiles.git
         dest: ~/code/github/
 
-    - include: software-oh_my_zsh-setup.yml
-
     - debug:
         msg: 
-          - "Remaining Tasks to complete:"
+          - "Remaining tasks that may be complete:"
           - "[ ] Stow restore dotfiles"
+
+  - name: Run OMZ setup playbook
+    include: software-oh_my_zsh-setup.yml

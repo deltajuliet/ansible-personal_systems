@@ -181,11 +181,9 @@
 
 
     - name: Clone in personal dotfiles repo
-      ansible.builtin.git:
-        repo:  git@github.com:deltajuliet/dotfiles.git
+      git:
+        repo: git@github.com:deltajuliet/dotfiles.git
         dest: ~/code/github/
-
-    - include software-oh_my_zsh-setup.yml
         
     - debug:
         msg:
@@ -194,4 +192,6 @@
           - "[ ] Configure Alfred to start on boot, enable clipboard history"
           - "[ ] Configure Magnet to start on boot"
           - "[ ] Login to Evernote"
-          - "[ ] Stow restore dotfiles"  
+
+  - name: Run OMZ setup playbook
+    include: software-oh_my_zsh-setup.yml
