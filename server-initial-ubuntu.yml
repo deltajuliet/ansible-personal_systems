@@ -2,75 +2,88 @@
   - name: "Install commmon dev (Ubuntu) server software"
     hosts: localhost
     connection: local
-    become: yes
     tasks:
         
     - name: "Install Git"
+      become: yes
       apt:
         name: git
         state: present
         
     - name: "Install Vim"
+      become: yes
       apt:
         name: vim
         state: present
         
     - name: "Install core-utils"
+      become: yes
       apt:
         name: coreutils
         state: present
 
     - name: "Install curl"
+      become: yes
       apt:
         name: curl
         state: present
         
     - name: "Install GNUPG"
+      become: yes
       apt:
         name: gnupg
         state: present
         
     - name: "Install htop"
+      become: yes
       apt:
         name: htop
         state: present
         
     - name: "Install PDFGrep"
+      become: yes
       apt:
         name: pdfgrep
         state: present
 
     - name: "Install Python"
+      become: yes
       apt:
         name: python
         state: present
 
     - name: "Install Stow"
+      become: yes
       apt:
         name: stow
         state: present
 
     - name: "Install Telnet"
+      become: yes
       apt:
         name: telnet
         state: present
         
     - name: "Install Tmux"
+      become: yes
       apt:
         name: tmux
         state: present
 
     - name: "Install Wget"
+      become: yes
       apt:
         name: wget
         state: present
         
     - name: "Install ZSH"
+      become: yes
       apt:
         name: zsh
         state: present
 
     - name: Clone in personal dotfiles repo
+      user: 
       git:
         repo: https://github.com/deltajuliet/dotfiles.git
         dest: ~/code/github/
