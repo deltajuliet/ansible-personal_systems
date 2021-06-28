@@ -19,6 +19,12 @@ else
     echo "Using normal dotfiles"
 fi
 
+if [[ -d ~/.oh-my-zsh ]]; then
+    if [[ ! -L ~/.zshrc ]]; then
+        mv ~/.zshrc .zshrc.pre_initial_stow
+    fi
+fi  
+
 stow -vt ~ bash
 stow -vt ~ git
 stow -vt ~ screen
