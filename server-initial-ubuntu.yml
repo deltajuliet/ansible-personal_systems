@@ -85,7 +85,7 @@
     - name: Clone in personal dotfiles repo
       git:
         repo: https://github.com/deltajuliet/dotfiles.git
-        dest: ~/code/github/
+        dest: ~/code/github/dotfiles
 
     - debug:
         msg: 

@@ -6,61 +6,73 @@
     tasks:
         
     - name: "Install Git"
+      become: yes
       yum:
         name: git
         state: present
         
     - name: "Install Vim"
+      become: yes
       yum:
         name: vim
         state: present
         
     - name: "Install core-utils"
+      become: yes
       yum:
         name: coreutils
         state: present
 
     - name: "Install curl"
+      become: yes
       yum:
         name: curl
         state: present
         
     - name: "Install GNUPG"
+      become: yes
       yum:
         name: gnupg
         state: present
         
     - name: "Install htop"
+      become: yes
       yum:
         name: htop
         state: present
 
     - name: "Install Python"
+      become: yes
       yum:
         name: python
         state: present
 
     - name: "Install Stow"
+      become: yes
       ansible.builtin.shell: specific_install_scripts/redhat_stow_install.sh
       args:
         creates: /usr/local/bin/stow
 
     - name: "Install Telnet"
+      become: yes
       yum:
         name: telnet
         state: present
         
     - name: "Install Tesseract"
+      become: yes
       yum:
         name: tesseract
         state: present
         
     - name: "Install Tmux"
+      become: yes
       yum:
         name: tmux
         state: present
 
     - name: "Install Wget"
+      become: yes
       yum:
         name: wget
         state: present
@@ -68,7 +80,7 @@
     - name: Clone in personal dotfiles repo
       git:
         repo: https://github.com/deltajuliet/dotfiles.git
-        dest: ~/code/github/
+        dest: ~/code/github/dotfiles
 
     - debug:
         msg: 
