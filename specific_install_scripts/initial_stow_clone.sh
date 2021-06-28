@@ -13,15 +13,16 @@ if [[ $custom == "y" ]]; then
         exit 1
     fi
 elif [[ $custom != "n" ]]; then
-    echo "Invalid input received"
+    echo "[!] Invalid input received"
     exit 1
 else
-    echo "Using normal dotfiles"
+    echo "[*] Using normal dotfiles"
 fi
 
 if [[ -d ~/.oh-my-zsh ]]; then
     if [[ ! -L ~/.zshrc ]]; then
-        mv ~/.zshrc .zshrc.pre_initial_stow
+        echo "[!] Moving .zshrc hard file out of the way. Oh-my-zsh just installed?"
+        mv ~/.zshrc ~/.zshrc.pre_initial_stow
     fi
 fi  
 
