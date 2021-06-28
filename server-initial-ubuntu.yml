@@ -83,7 +83,6 @@
         state: present
 
     - name: Clone in personal dotfiles repo
-      user: 
       git:
         repo: https://github.com/deltajuliet/dotfiles.git
         dest: ~/code/github/
