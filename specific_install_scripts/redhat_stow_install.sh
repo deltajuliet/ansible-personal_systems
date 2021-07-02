@@ -1,7 +1,5 @@
 #!/bin/bash
-who = whoami
-
-if [[ $who != "root"]]; then
+if [[ $EUID -ne 0 ]]; then
     echo "This script needs to be run as root"
     exit 1
 fi
