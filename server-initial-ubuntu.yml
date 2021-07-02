@@ -52,6 +52,12 @@
         name: python
         state: present
 
+    - name: "Install Tar"
+      become: yes
+      apt:
+        name: tar
+        present: yes
+
     - name: "Install Stow"
       become: yes
       apt:
@@ -93,4 +99,4 @@
           - "[ ] Stow restore dotfiles"
 
   - name: Run OMZ setup playbook
-    include: software-oh_my_zsh-setup.yml
+    import_playbook: software-oh_my_zsh-setup.yml

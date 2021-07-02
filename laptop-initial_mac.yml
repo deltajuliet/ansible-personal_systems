@@ -198,4 +198,4 @@
           - "[ ] Login to Evernote"
 
   - name: Run OMZ setup playbook
-    include: software-oh_my_zsh-setup.yml
+    import_playbook: software-oh_my_zsh-setup.yml
