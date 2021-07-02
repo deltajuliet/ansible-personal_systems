@@ -71,12 +71,6 @@
         name: telnet
         state: present
         
-    - name: "Install Tesseract"
-      become: yes
-      yum:
-        name: tesseract
-        state: present
-        
     - name: "Install Tmux"
       become: yes
       yum:
