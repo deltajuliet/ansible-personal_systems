@@ -4,7 +4,7 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-yum install perl-Test-Simple perl-Test-Output # Install stow dependencies
+yum -y install perl-Test-Simple perl-Test-Output # Install stow dependencies
 curl -o /tmp/stow-latest.tar.gz http://ftp.gnu.org/gnu/stow/stow-latest.tar.gz
 tar xzf /tmp/stow-latest.tar.gz
 cd /tmp/stow-latest
