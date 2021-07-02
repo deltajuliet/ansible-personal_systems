@@ -34,6 +34,12 @@
       yum:
         name: gnupg
         state: present
+
+    - name: "Install Hostname"
+      become: yes
+      yum:
+        name: hostname
+        state: present
         
     - name: "Install htop"
       become: yes
