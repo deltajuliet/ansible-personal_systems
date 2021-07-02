@@ -47,6 +47,12 @@
         name: python
         state: present
 
+    - name: "Install Tar"
+      become: yess
+      yum:
+        name: tar
+        state: present
+
     - name: "Install Stow"
       become: yes
       ansible.builtin.shell: specific_install_scripts/redhat_stow_install.sh
