@@ -41,6 +41,12 @@
         name: htop
         state: present
 
+    - name: Install Make
+      become: yes
+      yum:
+        name: make
+        present: yes
+
     - name: "Install Python"
       become: yes
       yum:
