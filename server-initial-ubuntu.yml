@@ -56,7 +56,7 @@
       become: yes
       apt:
         name: tar
-        present: yes
+        state: present
 
     - name: "Install Stow"
       become: yes
