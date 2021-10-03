@@ -28,6 +28,7 @@ fi
 
 stow -vt ~ bash
 stow -vt ~ git
+stow -vt ~ htop
 stow -vt ~ screen
 stow -vt ~ tmux
 stow -vt ~ vim
