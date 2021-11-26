@@ -124,6 +124,11 @@
         name: wget
         state: present
         
+    - name: "MAS Install Aeon Timeline"
+      community.general.mas:
+        id: 1563351378
+        state: present
+
     - name: "MAS Install Evernote"
       community.general.mas:
         id: 406056744
