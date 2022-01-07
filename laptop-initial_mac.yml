@@ -149,6 +149,11 @@
         id: 1396383432
         state: present
 
+    - name: "MAS Install Microsoft OneNote"
+      community.general.mas:
+        id: 784801555
+        state: present
+
     - name: "MAS Install Microsoft To Do"
       community.general.mas:
         id: 1274495053
