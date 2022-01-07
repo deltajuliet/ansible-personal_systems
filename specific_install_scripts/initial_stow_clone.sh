@@ -30,6 +30,7 @@ stow -vt ~ bash
 stow -vt ~ git
 stow -vt ~ htop
 stow -vt ~ screen
+stow -vt ~ ssh
 stow -vt ~ tmux
 stow -vt ~ vim
 stow -vt ~ zsh
