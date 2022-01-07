@@ -29,6 +29,11 @@
         name: vim
         state: present
     
+    - name: "Brew install Alfred"
+      community.general.homebrew_cask:
+        name: alfred
+        state: present
+
     - name: "Brew install iTerm"
       community.general.homebrew_cask:
         name: iterm2
@@ -44,19 +49,24 @@
         name: font-source-code-pro
         state: present
 
-    - name: "Brew install VS Code"
-      community.general.homebrew_cask:
-        name: visual-studio-code
-        state: present
-        
-    - name: "Brew install Alfred"
-      community.general.homebrew_cask:
-        name: alfred
-        state: present
-
     - name: "Brew install Spotify"
       community.general.homebrew_cask:
         name: spotify
+        state: present
+
+    - name: "Brew install Sublime Merge"
+      community.general.homebrew_cask:
+        name: sublime-merge
+        state: present
+
+    - name: "Brew install Sublime Text"
+      community.general.homebrew_cask:
+        name: sublime-text
+        state: present
+      
+    - name: "Brew install VS Code"
+      community.general.homebrew_cask:
+        name: visual-studio-code
         state: present
         
     - name: "Brew install AWS-CLI"
