@@ -1,6 +1,7 @@
 ---
   - name: "Install commmon Mac software"
     hosts: localhost
+    force_handlers: yes
     connection: local
     tasks:
     
@@ -139,6 +140,16 @@
         id: 1563351378
         state: present
 
+    - name: "MAS Install CyberDuck"
+      community.general.mas:
+        id: 409222199
+        state: present
+
+    - name: "MAS Install DaisyDisk"
+      community.general.mas:
+        id: 411643860
+        state: present
+
     - name: "MAS Install Evernote"
       community.general.mas:
         id: 406056744
@@ -149,24 +160,9 @@
         id: 1396383432
         state: present
 
-    - name: "MAS Install Microsoft OneNote"
+    - name: "MAS Install Keka"
       community.general.mas:
-        id: 784801555
-        state: present
-
-    - name: "MAS Install Microsoft To Do"
-      community.general.mas:
-        id: 1274495053
-        state: present
-
-    - name: "MAS Install Patterns"
-      community.general.mas:
-        id: 429449079
-        state: present  
-
-    - name: "MAS Install Mountain Duck"
-      community.general.mas:
-        id: 1024974133
+        id: 470158793
         state: present
 
     - name: "MAS Install iStat Menus"
@@ -174,14 +170,39 @@
         id: 1319778037
         state: present
 
+    - name: "MAS Install Kindle"
+      community.general.mas:
+        id: 405399194
+        state: present
+
+    - name: "MAS Install Microsoft OneNote"
+      community.general.mas:
+        id: 784801555
+        state: present
+
+    - name: "MAS Install Microsoft Remote Desktop"
+      community.general.mas:
+        id: 405399194
+        state: present
+
+    - name: "MAS Install Microsoft To Do"
+      community.general.mas:
+        id: 1274495053
+        state: present
+
+    - name: "MAS Install Mountain Duck"
+      community.general.mas:
+        id: 1024974133
+        state: present
+
     - name: "MAS Install Magnet"
       community.general.mas:
         id: 441258766
         state: present
 
-    - name: "MAS Install Slack"
+    - name: "MAS Install Patterns"
       community.general.mas:
-        id: 803453959
+        id: 429449079
         state: present  
 
     - name: "MAS Install PDFScanner"
@@ -189,25 +210,10 @@
         id: 410968114
         state: present
 
-    - name: "MAS Install Keka"
+    - name: "MAS Install Slack"
       community.general.mas:
-        id: 470158793
-        state: present
-
-    - name: "MAS Install DaisyDisk"
-      community.general.mas:
-        id: 411643860
-        state: present
-
-    - name: "MAS Install Kindle"
-      community.general.mas:
-        id: 405399194
-        state: present
-
-    - name: "MAS Install Microsoft Remote Desktop"
-      community.general.mas:
-        id: 405399194
-        state: present
+        id: 803453959
+        state: present  
 
     - name: Clone in personal dotfiles repo
       git:
