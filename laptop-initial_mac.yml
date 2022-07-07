@@ -226,7 +226,7 @@
           - "[ ] Configure iTerm for transparent background and unlimited scrollback"
           - "[ ] Configure Alfred to start on boot, enable clipboard history"
           - "[ ] Configure Magnet to start on boot"
-          - "[ ] Login to Evernote"
+#          - "[ ] Login to Evernote"
 
   - name: Run OMZ setup playbook
     import_playbook: software-oh_my_zsh-setup.yml
