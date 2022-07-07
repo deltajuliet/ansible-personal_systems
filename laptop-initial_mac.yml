@@ -150,15 +150,15 @@
         id: 411643860
         state: present
 
-    - name: "MAS Install Evernote"
-      community.general.mas:
-        id: 406056744
-        state: present
+#    - name: "MAS Install Evernote"
+#      community.general.mas:
+#        id: 406056744
+#        state: present
 
-    - name: "MAS Install EverTool"
-      community.general.mas:
-        id: 1396383432
-        state: present
+#    - name: "MAS Install EverTool"
+#      community.general.mas:
+#        id: 1396383432
+#        state: present
 
     - name: "MAS Install Keka"
       community.general.mas:
