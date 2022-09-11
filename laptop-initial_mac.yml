@@ -50,11 +50,6 @@
         name: font-source-code-pro
         state: present
 
-    - name: "Brew install Spotify"
-      community.general.homebrew_cask:
-        name: spotify
-        state: present
-
     - name: "Brew install Sublime Merge"
       community.general.homebrew_cask:
         name: sublime-merge
