@@ -170,9 +170,29 @@
         id: 405399194
         state: present
 
+    - name: "MAS Install Microsoft Excel"
+      community.general.mas:
+        id: 462058435
+        state: present
+  
+    - name: "MAS Install Microsoft OneDrive"
+      community.general.mas:
+        id: 823766827
+        state: present
+
     - name: "MAS Install Microsoft OneNote"
       community.general.mas:
         id: 784801555
+        state: present
+
+    - name: "MAS Install Microsoft Outlook"
+      community.general.mas:
+        id: 985367838
+        state: present
+
+    - name: "MAS Install Microsoft Powerpoint"
+      community.general.mas:
+        id: 462062816
         state: present
 
     - name: "MAS Install Microsoft Remote Desktop"
@@ -183,6 +203,11 @@
     - name: "MAS Install Microsoft To Do"
       community.general.mas:
         id: 1274495053
+        state: present
+
+    - name: "MAS Install Microsoft Word"
+      community.general.mas:
+        id: 462054704
         state: present
 
     - name: "MAS Install Mountain Duck"
