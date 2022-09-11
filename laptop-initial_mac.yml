@@ -233,6 +233,11 @@
     - name: "MAS Install Slack"
       community.general.mas:
         id: 803453959
+        state: present
+
+    - name: "MAS Install TextSniper"
+      community.general.mas:
+        id: 1528890965
         state: present  
 
     - name: Clone in personal dotfiles repo
