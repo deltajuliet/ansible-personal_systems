@@ -114,6 +114,16 @@
       community.general.homebrew_cask:
         name: iterm2
         state: present
+
+    - name: "Cask install Signal"
+      community.general.homebrew_cask:
+        name: signal
+        state: present
+
+    - name: "Cask install Slack"
+      community.general.homebrew_cask:
+        name: slack
+        state: present
         
     - name: "Add cask with SourceProFonts"
       community.general.homebrew_tap:
