@@ -252,7 +252,7 @@
 
     - name: "Disable automatically arranging spaces"
       community.general.osx_defaults: 
-        domains: com.apple.dock 
+        domain: com.apple.dock 
         key: mrul-spaces
         type: bool 
         value: false
