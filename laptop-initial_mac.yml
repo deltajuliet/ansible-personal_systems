@@ -238,7 +238,15 @@
     - name: "MAS Install TextSniper"
       community.general.mas:
         id: 1528890965
-        state: present  
+        state: present
+
+    - name: "Disable automatically arranging spaces"
+      community.general.osx_defaults: 
+        domains: com.apple.dock 
+        key: mrul-spaces
+        type: bool 
+        value: false
+        state: present
 
     - name: Clone in personal dotfiles repo
       git:
