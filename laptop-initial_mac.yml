@@ -14,57 +14,7 @@
       community.general.homebrew:
         name: mas
         state: present
-        
-    - name: "Brew install Git"
-      community.general.homebrew:
-        name: git
-        state: present
     
-    - name: "Brew install SVN"
-      community.general.homebrew:
-        name: svn
-        state: present
-        
-    - name: "Brew install Vim"
-      community.general.homebrew:
-        name: vim
-        state: present
-    
-    - name: "Brew install Alfred"
-      community.general.homebrew_cask:
-        name: alfred
-        state: present
-
-    - name: "Brew install iTerm"
-      community.general.homebrew_cask:
-        name: iterm2
-        state: present
-        
-    - name: "Add cask with SourceProFonts"
-      community.general.homebrew_tap:
-        name: homebrew/cask-fonts
-        state: present  
-    
-    - name: "Brew install SourceProFonts"
-      community.general.homebrew_cask:
-        name: font-source-code-pro
-        state: present
-
-    - name: "Brew install Sublime Merge"
-      community.general.homebrew_cask:
-        name: sublime-merge
-        state: present
-
-    - name: "Brew install Sublime Text"
-      community.general.homebrew_cask:
-        name: sublime-text
-        state: present
-      
-    - name: "Brew install VS Code"
-      community.general.homebrew_cask:
-        name: visual-studio-code
-        state: present
-        
     - name: "Brew install AWS-CLI"
       community.general.homebrew:
         name: awscli
@@ -85,6 +35,11 @@
         name: gnupg
         state: present
         
+    - name: "Brew install Git"
+      community.general.homebrew:
+        name: git
+        state: present
+  
     - name: "Brew install htop"
       community.general.homebrew:
         name: htop
@@ -109,6 +64,11 @@
       community.general.homebrew:
         name: stow
         state: present
+    
+    - name: "Brew install SVN"
+      community.general.homebrew:
+        name: svn
+        state: present
 
     - name: "Brew install Telnet"
       community.general.homebrew:
@@ -128,6 +88,56 @@
     - name: "Brew install Wget"
       community.general.homebrew:
         name: wget
+        state: present
+        
+    - name: "Brew install Vim"
+      community.general.homebrew:
+        name: vim
+        state: present
+
+    - name: "Cask install Alfred"
+      community.general.homebrew_cask:
+        name: alfred
+        state: present
+
+    - name: "Cask install Amethyst"
+      community.general.homebrew_cask:
+        name: amethyst
+        state: present
+
+    - name: "Cask install Keybase"
+      community.general.homebrew_cask:
+        name: keybase
+        state: present
+    
+    - name: "Cask install iTerm"
+      community.general.homebrew_cask:
+        name: iterm2
+        state: present
+        
+    - name: "Add cask with SourceProFonts"
+      community.general.homebrew_tap:
+        name: homebrew/cask-fonts
+        state: present  
+    
+    - name: "Cask install SourceProFonts"
+      community.general.homebrew_cask:
+        name: font-source-code-pro
+        state: present
+
+    - name: "Cask install Sublime Merge"
+      community.general.homebrew_cask:
+        name: sublime-merge
+        state: present
+
+    - name: "Cask install Sublime Text"
+      community.general.homebrew_cask:
+        name: sublime-text
+        state: present
+      
+    - name: "Cask install VS Code"
+      community.general.homebrew_cask:
+        name: visual-studio-code
         state: present
         
     - name: "MAS Install Aeon Timeline"
