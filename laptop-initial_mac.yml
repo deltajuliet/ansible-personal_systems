@@ -115,9 +115,9 @@
         name: alfred
         state: present
 
-    - name: "Cask install Amethyst"
+    - name: "Cask install Karabiner"
       community.general.homebrew_cask:
-        name: amethyst
+        name: karabiner-elements
         state: present
 
     - name: "Cask install Keybase"

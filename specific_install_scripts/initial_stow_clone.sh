@@ -30,6 +30,7 @@ stow -vt ~ bash
 stow -vt ~ git
 stow -vt ~ htop
 stow -vt ~ iterm
+#stow -vt ~ karabiner #CURRENTLY DOESN'T WORK DUE TO ISSUES WITH SYMLINK'D FILES
 stow -vt ~ screen
 stow -vt ~ skhd
 stow -vt ~ ssh
