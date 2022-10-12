@@ -44,6 +44,11 @@
       community.general.homebrew:
         name: htop
         state: present
+
+    - name: "Brew install jq"
+      community.general.homebrew:
+        name: jq
+        state: present
         
     - name: "Brew install kubectl"
       community.general.homebrew:
@@ -58,6 +63,11 @@
     - name: "Brew install Python"
       community.general.homebrew:
         name: python
+        state: present
+
+    - name: "Brew install SKHD"
+      community.general.homebrew:
+        name: koekeishiya/formulae/skhd
         state: present
 
     - name: "Brew install Stow"
@@ -93,6 +103,11 @@
     - name: "Brew install Vim"
       community.general.homebrew:
         name: vim
+        state: present
+
+    - name: "Brew install Yabai"
+      community.general.homebrew:
+        name: koekeishiya/formulae/yabai
         state: present
 
     - name: "Cask install Alfred"
