@@ -292,8 +292,11 @@
         msg:
           - "Remaining Tasks to complete:"
           - "[ ] Configure iTerm for transparent background and unlimited scrollback"
-          - "[ ] Configure Alfred to start on boot, enable clipboard history"
-          - "[ ] Configure Magnet to start on boot"
+          - "[ ] Configure Alfred to start on boot, enable clipboard history, and config backup location"
+          - "[ ] Run the following commands to start yabai and skhd:"
+          - "       - `brew services start yabai`"
+          - "       - `brew services start skhd`" 
+#          - "[ ] Configure Magnet to start on boot"
 #          - "[ ] Login to Evernote"
 
   - name: Run OMZ setup playbook

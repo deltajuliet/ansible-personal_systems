@@ -29,8 +29,11 @@ fi
 stow -vt ~ bash
 stow -vt ~ git
 stow -vt ~ htop
+stow -vt ~ iterm
 stow -vt ~ screen
+stow -vt ~ skhd
 stow -vt ~ ssh
 stow -vt ~ tmux
 stow -vt ~ vim
+stow -vt ~ yabai
 stow -vt ~ zsh
