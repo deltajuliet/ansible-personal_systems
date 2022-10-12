@@ -293,6 +293,8 @@
           - "Remaining Tasks to complete:"
           - "[ ] Configure iTerm for transparent background and unlimited scrollback"
           - "[ ] Configure Alfred to start on boot, enable clipboard history, and config backup location"
+          - "[ ] Configure Karabiner to:"
+          - "       -Use caps lock as a hyper key in 'Complex Modifications' using: https://ke-complex-modifications.pqrs.org/#hyper_key"
           - "[ ] Run the following commands to start yabai and skhd:"
           - "       - `brew services start yabai`"
           - "       - `brew services start skhd`" 
