@@ -29,12 +29,17 @@ fi
 stow -vt ~ bash
 stow -vt ~ git
 stow -vt ~ htop
-stow -vt ~ iterm
-#stow -vt ~ karabiner #CURRENTLY DOESN'T WORK DUE TO ISSUES WITH SYMLINK'D FILES
 stow -vt ~ screen
-stow -vt ~ skhd
-stow -vt ~ ssh
+#stow -vt ~ ssh
 stow -vt ~ tmux
 stow -vt ~ vim
-stow -vt ~ yabai
 stow -vt ~ zsh
+
+unamestr=`uname`
+if [[ "$unamestr" == 'Darwin' ]]; then
+    stow -vt ~ iterm
+    #stow -vt ~ karabiner #CURRENTLY DOESN'T WORK DUE TO ISSUES WITH SYMLINK'D FILES
+    stow -vt ~ skhd
+    stow -vt ~ spacelauncher
+    stow -vt ~ yabai
+fi

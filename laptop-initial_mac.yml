@@ -115,10 +115,10 @@
         name: alfred
         state: present
 
-    - name: "Cask install Karabiner"
-      community.general.homebrew_cask:
-        name: karabiner-elements
-        state: present
+    # - name: "Cask install Karabiner"
+    #   community.general.homebrew_cask:
+    #     name: karabiner-elements
+    #     state: present
 
     - name: "Cask install Keybase"
       community.general.homebrew_cask:
@@ -148,6 +148,11 @@
     - name: "Cask install SourceProFonts"
       community.general.homebrew_cask:
         name: font-source-code-pro
+        state: present
+
+    - name: "Cask install SpaceLauncher"
+      community.general.homebrew_cask:
+        name: spacelauncher
         state: present
 
     - name: "Cask install Sublime Merge"
