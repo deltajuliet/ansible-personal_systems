@@ -124,6 +124,11 @@
       community.general.homebrew_cask:
         name: keybase
         state: present
+
+    - name: "Cask install KeyCue"
+      community.general.homebrew_cask:
+        name: keycue
+        state: present
     
     - name: "Cask install iTerm"
       community.general.homebrew_cask:
