@@ -301,6 +301,7 @@
       git:
         repo: https://github.com/deltajuliet/dotfiles.git
         dest: ~/code/github/dotfiles
+        update: no
         
     - debug:
         msg:
