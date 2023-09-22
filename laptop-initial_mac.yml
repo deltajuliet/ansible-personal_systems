@@ -115,6 +115,11 @@
         name: alfred
         state: present
 
+    - name: "Cask install Bartender"
+      community.general.homebrew_cask:
+        name: bartender
+        state: present
+
     # - name: "Cask install Karabiner"
     #   community.general.homebrew_cask:
     #     name: karabiner-elements
@@ -173,6 +178,11 @@
     - name: "Cask install VS Code"
       community.general.homebrew_cask:
         name: visual-studio-code
+        state: present
+        
+    - name: "Cask install YubiSwitch"
+      community.general.homebrew_cask:
+        name: pallotron-yubiswitch
         state: present
         
     - name: "MAS Install Aeon Timeline"
