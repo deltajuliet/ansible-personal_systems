@@ -140,15 +140,20 @@
         name: iterm2
         state: present
 
+    - name: "Cask install Obsidian"
+      community.general.homebrew_cask:
+        name: obsidian
+        state: present
+ 
     - name: "Cask install Signal"
       community.general.homebrew_cask:
         name: signal
         state: present
 
-    - name: "Cask install Slack"
-      community.general.homebrew_cask:
-        name: slack
-        state: present
+    # - name: "Cask install Slack"
+    #   community.general.homebrew_cask:
+    #     name: slack
+    #     state: present
         
     - name: "Add cask with SourceProFonts"
       community.general.homebrew_tap:
@@ -263,6 +268,11 @@
     - name: "MAS Install Microsoft Word"
       community.general.mas:
         id: 462054704
+        state: present
+
+    - name: "MAS Install Moom"
+      community.general.mas:
+        id: 419330170
         state: present
 
     - name: "MAS Install Mountain Duck"
