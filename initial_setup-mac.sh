@@ -42,7 +42,7 @@ ansible-playbook laptop-initial_mac.yml
 echo "[-] Playbook run complete"
 
 cd ~/code/github/dotfiles
-stow -vt ~ iterm
+#stow -vt ~ iterm
 
 echo "If a Yubikey is needed for cloning dotfile repos, run the following:/n"
 echo "

@@ -331,7 +331,7 @@
     - debug:
         msg:
           - "Remaining Tasks to complete:"
-#          - "[ ] Configure iTerm for transparent background and unlimited scrollback"
+          - "[ ] Configure iTerm to load preferences from a custom location (/Users/deltajuliet/code/github/dotfiles/iterm) using the Preferences > General > Preferences > Load preferences from a custom folder or URL option"
           - "[ ] Configure Alfred to start on boot, enable clipboard history, and config backup location"
           # - "[ ] Configure Karabiner to:"
           # - "       -Use caps lock as a hyper key in 'Complex Modifications' using: https://ke-complex-modifications.pqrs.org/#hyper_key"
@@ -339,7 +339,7 @@
           - "       - `brew services start yabai`"
           - "       - `brew services start skhd`" 
           - "[ ] Change System Preferences > Accessibility > Display > Reduce Motion to Checked"
-          - "[ ] Configure a .zsh_locala and add local settings like git config --globals, etc."
+          - "[ ] Configure a .zsh_local and add local settings like git config --globals, etc."
 #          - "[ ] Configure Magnet to start on boot"
 #          - "[ ] Login to Evernote"
 
