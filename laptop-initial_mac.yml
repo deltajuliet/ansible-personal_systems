@@ -45,6 +45,11 @@
         name: htop
         state: present
 
+    - name: "Brew install kanata"
+      community.general.homebrew:
+        name: kanata
+        state: present
+
     - name: "Brew install jq"
       community.general.homebrew:
         name: jq
@@ -54,7 +59,12 @@
       community.general.homebrew:
         name: kubernetes-cli
         state: present
-        
+    
+    - name: "Brew install mdless"
+      community.general.homebrew:
+        name: mdless
+        state: present
+    
     - name: "Brew install PDFGrep"
       community.general.homebrew:
         name: pdfgrep

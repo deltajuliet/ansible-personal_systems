@@ -39,6 +39,7 @@ unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
     stow -vt ~ iterm
     #stow -vt ~ karabiner #CURRENTLY DOESN'T WORK DUE TO ISSUES WITH SYMLINK'D FILES
+    stow -vt ~ kanata
     stow -vt ~ skhd
     stow -vt ~ spacelauncher
     stow -vt ~ yabai
